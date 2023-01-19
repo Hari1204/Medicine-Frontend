@@ -1,0 +1,108 @@
+<br><br><br>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+    		<div class="invoice-title">
+                <br>
+    			<h2><u>Invoice:</u>
+                    <br>&nbsp;&nbsp;&nbsp;{{userData.name}}</h2>
+                <!-- <h3 class="pull-right">Order # 12345</h3> -->
+    		</div>
+    		<hr>
+    		<div class="row">
+    			<div class="col-xs-6">
+    				<address>
+    				<strong>Billed To:</strong><br>
+    					{{userData.address}}<br>
+						{{userData.pincode}}
+    				</address>
+    			</div>
+    			<div class="col-xs-6 text-right">
+    				<address>
+        			<strong>Shipped To:</strong><br>
+                    {{userData.address}}<br>
+					{{userData.pincode}}
+    				</address>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="col-xs-6">
+    				<address>
+    					<strong>Mobile Number:</strong><br>
+    					{{userData.phone}}<br>
+    				</address>
+    			</div>
+    			<div class="col-xs-6 text-right">
+    				<address>
+    					<strong>Order Date:</strong><br>
+    					{{Data.date}}<br><br>
+    				</address>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    
+    <div class="row">
+    	<div class="col-md-12">
+    		<div class="panel panel-default">
+    			<div class="panel-heading">
+    				<h3 class="panel-title"><strong>Order summary</strong></h3>
+    			</div>
+    			<div class="panel-body">
+    				<div class="table-responsive">
+    					<table class="table table-condensed">
+    						<thead>
+                                <p  class="thank">Thank You For Purchasing!</p>
+                                <tr>
+        							<td><strong>Item</strong></td>
+        							<td class="text-center"><strong>Price</strong></td>
+        							<td class="text-center"><strong>Quantity</strong></td>
+        							<td class="text-right"><strong>Total</strong></td>
+                                </tr>
+    						</thead>
+    						<tbody>
+								<tbody>
+									
+    							<tr>
+    								<td>{{orderdata.productname}}</td>
+    								<td class="text-center">{{orderdata.price}}</td>
+    								<td class="text-center">{{orderdata.qty}}</td>
+    								<td class="text-right">{{orderdata.price*orderdata.qty}}</td>
+    							</tr>
+                               
+    							<tr>
+    								<td class="thick-line"></td>
+    								<td class="thick-line"></td>
+    								<td class="thick-line text-center"><strong>Total Quantity</strong></td>
+    								<td class="thick-line text-right">{{orderdata.qty}}</td>
+    							</tr>
+    							
+    							<tr>
+    								<td class="no-line"></td>
+    								<td class="no-line"></td>
+    								<td class="no-line text-center"><strong>Total</strong></td>
+    								<td class="no-line text-right">{{orderdata.price*orderdata.qty}}</td>
+    							</tr>
+								<tr>
+    								<td class="no-line"></td>
+    								<td class="no-line"></td>
+    								<td class="no-line text-center"><strong>Payment Mode:</strong></td>
+    								<td class="no-line text-right"><span style="color:green">Cash On Delivery</span></td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>
+<br>
+<button (click)="pdf()" class="save">Print</button>
+<br>
+<p></p>

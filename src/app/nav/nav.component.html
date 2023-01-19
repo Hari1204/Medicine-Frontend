@@ -1,0 +1,15 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav>
+    <ul class="navul">
+        <li class="navli"><h2>Welcome&nbsp;<i>{{userData.name}}!</i></h2></li> 
+        <li class="navli"><p class="cent">Health<b style="color: rgb(173, 241, 173);">+</b> Pharmacy</p></li>
+        <li class="navli"><a class="hom" routerLink="/home">Home&nbsp;<i class="fa fa-home" style="font-size:24px;"></i></a></li>
+        <li class="navli"><a class="car" routerLink="/cart">Cart&nbsp;<i class="fa fa-shopping-cart" style="font-size:24px"></i>&nbsp;<button class="badge">{{this.count}}</button></a></li>
+        <li class="navli"><a class="his" routerLink="/order">History&nbsp;<i class="fa fa-history" style="font-size:24px"></i></a></li>
+        <!-- <li class="navli"><button class="navbtn" (click)="bill()">Bill&nbsp;<i class="fa fa-history" style="font-size:24px"></i></button></li>
+        <li class="navli"><button class="navbtn" (click)="pay()">Payment&nbsp;<i class="fa fa-history" style="font-size:24px"></i></button></li> -->
+        <li class="navli"><a class="logout" (click)="logout()">Logout&nbsp;<i class="fa fa-sign-out" style="font-size:24px"></i></a></li>
+    </ul>
+</nav>

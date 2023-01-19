@@ -1,0 +1,57 @@
+<html>
+<head>
+<!-- CSS only -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link class="image" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+<section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="col-md-8 col-lg-7 col-xl-6">
+          <img src="https://pharmaceutical-journal.com/wp-content/uploads/2021/01/It-s-not-just-medicines-that-improve-health.jpg" class="img-fluid imglog" alt="Phone image">
+        </div>
+        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+          <form #loginform="ngForm" (ngSubmit)="loginuser()">
+            
+            <div class="log">
+                <small class="text-danger">{{msg}}</small>
+                <br>
+            <!-- input -->
+            <div class="form-outline mb-4">
+              <label class="form-label bright" for="form1Example13">Login ID</label>
+              
+              <input type="text"  pattern="(?=.*\d)(?=.*[A-Z]).{4,}" placeholder="Enter Your Login ID" id="form1Example13" class="form-control form-control-lg " 
+              name="userid" [(ngModel)]="user.userid" required #userid ="ngModel" [class.is-invalid]="userid.invalid && userid.touched"/>
+              <small class="text-danger" [class.d-none]="userid.valid || userid.untouched">Login ID is required and atleast 4 Digits</small>
+            </div>
+  
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <label class="form-label bright" for="form1Example23">Password</label>
+              <input type="password" placeholder="Enter Your Password" id="form1Example23" class="form-control form-control-lg "
+              name="pass" [(ngModel)]="user.pass" required #pass = "ngModel" [class.is-invalid]="pass.invalid && pass.touched"/>
+              <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">Password is required</small>
+            </div>
+            <div>
+              <a href="forgot" style="float: right;">Forgot Password?</a>
+            </div>
+  
+            <div class="d-flex justify-content-around align-items-center mb-4">
+              <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+            <br>
+          </div>
+            <p class="reglink">Don't have an account?<a href="./registration" class="reg">Register here</a></p>
+  
+                    
+        </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

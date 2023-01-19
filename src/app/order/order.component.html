@@ -1,0 +1,33 @@
+<app-nav></app-nav>
+<body>
+    <br>
+    <div class="cart">
+    History
+    </div>
+    <br><br>
+    <table class="center" [cellPadding]="20">
+    <thead>
+        <tr>
+        <td><h1><u><b>Preview</b></u></h1></td>
+        <td><h1><u><b>Date</b></u></h1></td>
+        <td><h1><u><b>Sampling Name</b></u></h1></td>
+        <td><h1><u><b>Price</b></u></h1></td>
+        <td><h1><u><b>Quantity</b></u></h1></td>
+        <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of orders">
+            <td><img class ="imgsize" src="{{order.pic}}"></td>
+            <td><b>{{order.date}}</b></td>
+            <!-- <td><b>{{order.userid}}</b></td> -->
+            <td><b>{{order.productname}}</b></td>
+            <td><b>Rs.{{order.price*order.qty}}</b></td>
+            <td>{{order.qty}}</td>
+            <td><button class="inbut" (click)="invoice(order)">Get Invoice</button></td>
+        </tr>
+    </tbody>
+    </table>
+    <br><br>
+
+</body>

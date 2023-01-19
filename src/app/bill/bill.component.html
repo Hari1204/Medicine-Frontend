@@ -1,0 +1,101 @@
+<br><br><br>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+    		<div class="invoice-title">
+                <br>
+    			<h2><u>Invoice:</u>
+                    <br>&nbsp;&nbsp;&nbsp;{{userData.name}}</h2>
+    		</div>
+    		<hr>
+    		<div class="row">
+    			<div class="col-xs-6">
+    				<address>
+    				<strong>Billed To:</strong><br>
+    					{{userData.address}}<br>
+                        {{userData.pincode}}
+    				</address>
+    			</div>
+    			<div class="col-xs-6 text-right">
+    				<address>
+        			<strong>Shipped To:</strong><br>
+                    {{userData.address}}<br>
+                    {{userData.pincode}}
+
+    				</address>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="col-xs-6">
+    				<address>
+    					<strong>Mobile Number:</strong><br>
+    					{{userData.phone}}<br>
+    				</address>
+    			</div>
+    			<div class="col-xs-6 text-right">
+    				<address>
+    					<strong>Order Date:</strong><br>
+    					{{Data.date}}<br><br>
+    				</address>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    
+    <div class="row">
+    	<div class="col-md-12">
+    		<div class="panel panel-default">
+    			<div class="panel-heading">
+    				<h3 class="panel-title"><strong>Order summary</strong></h3>
+    			</div>
+    			<div class="panel-body">
+    				<div class="table-responsive">
+    					<table class="table table-condensed">
+    						<thead>
+                                <p  class="thank">Thank You For Purchasing!</p>
+                                <tr>
+        							<td><strong>Item</strong></td>
+									<td><strong>Type</strong></td>
+        							<td><strong>Unit Cost</strong></td>
+        							<td><strong>Quantity</strong></td>
+        							<td><strong>Price</strong></td>
+                                </tr>
+    						</thead>
+    						<tbody>
+								<tbody>
+									<tr *ngFor="let temp of temps">
+										<td><b>{{temp.productname}}</b></td>
+										<td><b>{{temp.type}}</b></td>
+										<td><b>{{temp.price}}</b></td>
+										<td><b>{{temp.qty}}</b></td>
+										<td>Rs.{{temp.price*temp.qty}}</td>  
+									</tr>
+    						
+    							<tr>
+    								<td class="no-line"></td>
+    								<td class="no-line"></td>
+    								<td class="no-line text-center"><strong>Total</strong></td>
+    								<td class="no-line text-right">{{Total}}</td>
+    							</tr>
+								<tr>
+    								<td class="no-line"></td>
+    								<td class="no-line"></td>
+    								<td class="no-line text-center"><strong>Payment Mode:</strong></td>
+    								<td class="no-line text-right"><span class="mode">Cash on Delivery</span></td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>
+<button class="pdf" (click)="pdf()">Generate PDF</button>
+
+<button (click)="home()" class="pdf">BACK TO HOME</button>

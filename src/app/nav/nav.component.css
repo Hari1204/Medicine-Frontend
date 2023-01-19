@@ -1,0 +1,107 @@
+.navli {
+    float: left;
+    padding: 14px 16px;
+    display: block;
+    color: white;
+    text-align: center;    
+    text-decoration: none;
+    margin-top: 22px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(65, 97, 107);
+  }
+  .navbtn{
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    border: 4px solid  grey;
+    font-size: 16px;
+}
+.navbtn:hover{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(89, 109, 114);
+    color: aliceblue;
+}
+.logout{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    margin-top: 22px;
+}
+.logout:hover{
+    color:rgb(180, 219, 252);
+    text-decoration: none;
+}
+.badge{
+    color: red;
+    border-radius: 80%;
+}
+img{
+    height: 80px;
+    width: 80px;
+    border-radius: 60%;
+}
+.imgli{
+    float: left;
+    padding: 14px 16px;
+    display: block;
+    color: white;
+    text-align: center;    
+    text-decoration: none;
+}
+.his{
+    position: absolute;
+    right: 105px;
+    top: 12px;
+    margin-top: 22px;
+    text-decoration: none;
+}
+.his:hover{
+    color:rgb(180, 219, 252);
+}
+.car{
+    text-decoration: none;
+    position: absolute;
+    right: 190px;
+    top: 12px;
+    margin-top: 22px;
+}
+.car:hover{
+   color:rgb(180, 219, 252);
+}
+.hom{
+    text-decoration: none;
+    position: absolute;
+    right: 300px;
+    top: 12px;
+    margin-top: 22px;
+}
+.hom:hover{
+    color:rgb(180, 219, 252);
+}
+.text-rainbow-animation {
+    font-family:arial black;
+    font-size:40px;
+    background-image: 
+    linear-gradient(to right, rgb(71, 173, 117),black,rgb(67, 116, 87),rgb(245, 233, 179),rgb(68, 136, 54),black,rgb(136, 236, 78), rgb(71, 173, 117)); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    animation: rainbow-animation 80s linear infinite;
+  }
+  
+  @keyframes rainbow-animation {
+      to {
+          background-position: 4500vh;
+      }
+  }
+  .cent{
+    font-size: 60px;
+    margin-left: 180px;
+    font-family: 'Times New Roman', Times, serif;
+  }

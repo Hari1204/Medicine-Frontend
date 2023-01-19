@@ -1,0 +1,96 @@
+.center {
+    border-radius: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(133, 158, 179);
+    
+  }
+  .imgsize {
+    border: 3px solid rgb(73, 89, 102);
+     border-radius: 29px;
+     padding: 5px;
+     width: 150px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     height: 100px;
+     width: 100px;
+   }
+   .buttonb{
+    background-color: #1e7985;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-size: 16px;
+    margin-left: 20px;
+    border: 4px solid #084b53;
+  }
+  .buttong{
+    background-color: #076d0a;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-size: 16px;
+    border: 4px solid rgb(5, 83, 35);
+  }
+  .btn-center{
+    text-align: center;
+  }
+  .cart{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+  }
+  .btns{
+    background-color: rgb(236, 238, 129);
+    border-radius: 12px;
+    border-color: rgb(99, 100, 36);
+    font-weight: bold;
+  }
+  .empty{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .text{
+    font-size: 24px;
+    text-decoration: underline;
+    color: red;
+    font-weight: bold;
+  }
+  .tq{
+    position: absolute;
+    right: 40px;
+    top: 100px;
+    border-radius: 4px;
+    border: none;
+    border: 4px solid rgb(99, 100, 36);
+    font-weight: bold;
+    font-size: 12px;
+  }
+  body{
+    background-color: rgb(202, 225, 245);
+    height: fit-content;
+  }
+  .addmore{
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: #076d0a;
+    border: 4px solid darkgreen;
+    font-weight: bold;
+    font-style: oblique;
+  }
+  .inbut{
+    border: none;
+    border: 4px solid rgb(73, 89, 102);
+    border-radius: 20px;
+    background-color:  rgb(125, 197, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }

@@ -1,0 +1,65 @@
+<app-nav></app-nav>
+
+<ng-container *ngIf="carts.length>0" >
+
+<body>
+    <br>
+    <div class="cart">
+    Cart
+    </div>
+    <br>
+    <button class="tq">Total Quantity:{{county(carts)}}</button>
+    <br>
+<table class="center" [cellPadding]="20">
+    <thead>
+        <tr>
+        <td><h1><u><b>Preview</b></u></h1></td>
+        <td><h1><u><b>Product Name</b></u></h1></td>
+        <td><h1><u><b>Description</b></u></h1></td>
+        <td><h1><u><b>Price</b></u></h1></td>
+        <td><h1><u><b>Quantity</b></u></h1></td>
+        <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cart of carts">
+            <td><img class ="imgsize" src="{{cart.pic}}"></td>
+            <td><b>{{cart.productname}}</b></td>
+            <td><b>{{cart.productdesc}}</b></td>
+            <td><b>Rs.{{cart.price*cart.qty}}</b></td>
+            <td><button class="btns" (click)="dec(cart)">-</button>&nbsp;{{cart.qty}}&nbsp;<button  class="btns" (click)="inc(cart)">+</button></td>
+            <td><button class="btn btn-danger btnr" (click)="remove(cart.cartid)">Remove&nbsp;<i class="fa fa-trash"style="font-size:20px;color:whitesmoke"></i></button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><button class="addmore" (click)="addmore()">Add More..</button></td>    
+        </tr>
+    </tbody>
+    </table>
+    <br><br>
+    <div class="btn-center">
+        <button class="buttonb"><b><i>Total Amount = </i><u>Rs.{{getTotalAmount(carts)}}</u></b></button>
+        </div>
+    <br><br>
+    <div class="btn-center">
+    <button class="buttong" (click)="purchase()"><b><i>Purchase</i></b></button>
+    </div>
+    <br><br>
+    
+    </body>
+</ng-container>
+    <ng-container *ngIf="carts.length == 0">
+    
+        <img class="empty" src="https://hakimitr.com/assets/website/images/empty-cart.gif">
+        <p style="text-align: center;" class="text">Your Cart is Empty!</p>
+        <br>
+        <div class="btn-center">
+            <button class="buttong" (click)="shop()">Shop Now</button>
+            </div>
+        
+        
+    </ng-container>

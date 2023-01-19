@@ -1,0 +1,16 @@
+<html>
+<body>>
+    <div class="box">
+        <ul>
+        <li><label>Enter Userid:</label></li>
+        <li><input type="text" name="userid" placeholder="Enter Userid" [(ngModel)]="user.userid" style="width: 150%;"></li><br>
+        <li><label>Enter New Password</label></li>
+        <li><input type="password" name="pass" placeholder="Enter New Password" [(ngModel)]="user.pass" style="width: 150%;"></li><br>
+        <span>{{msg}}</span>
+        <li><label>Confirm Password</label></li>
+        <li><input type="password" name="confirmpass" placeholder="Re-Enter Password" [(ngModel)]="user.confirmpass" style="width: 150%;"></li><br>
+        <li><button class="cancel" (click)="backhome()">Cancel</button><button class="save" type="submit" (click)="save()">Save</button></li>
+        </ul>
+    </div>
+</body>
+</html>

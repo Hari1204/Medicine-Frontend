@@ -1,0 +1,91 @@
+html,body{
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-image: url("https://www.freecodecamp.org/news/content/images/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg");
+}
+label{
+    font-size: 28px;
+}
+input{
+    font-size: 20px;
+    border-radius: 6px;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(180deg,rgb(117, 218, 117),rgb(125, 242, 250));
+    background-size: contain;
+    max-width: fit-content;
+    padding-left: 7%;
+    padding-right: 16%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 2%;
+}
+ul{
+    list-style-type: none;
+}
+.save{
+    float: right;
+    background-color: rgb(1, 131, 206);
+    color: white;
+    border: none;
+    border-radius: 8%;
+    padding-right: 14px;
+    padding-left: 14px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 24px;
+}
+.save:hover
+{
+    float: right;
+    background-color: rgb(0, 83, 131);
+    color: white;
+    border: none;
+    border-radius: 8%;
+    padding-right: 14px;
+    padding-left: 14px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 24px;
+    box-shadow: 4px 2px 2px rgb(1, 131, 206);
+}
+.cancel{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 8%;
+    padding-right: 14px;
+    padding-left: 14px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 24px;
+}
+.cancel:hover
+{
+    background-color: rgb(151, 1, 1);
+    color: white;
+    border: none;
+    border-radius: 8%;
+    padding-right: 14px;
+    padding-left: 14px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 24px;
+    box-shadow: 4px 2px 2px red;
+}
+span
+{
+    font-size: 22px;
+    animation: color-change 0.5s infinite;
+}
+@keyframes color-change
+{
+    0%{color: red;}
+    50%{color: black;}
+    100%{color: red;}
+}
